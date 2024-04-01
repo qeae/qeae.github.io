@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jap index</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="styles/japstyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+              font-family: 'Roboto', serif;
+              font-size: 19px;
+            }
+        </style>
+        <title>Japanese ressources</title>
+        <style>
+            body {
+                background-color: rgb(240, 223, 223);
+            }
+
+            .collapsible {
+              background-color: #f52ac5bd;
+              color: white;
+              cursor: pointer;
+              padding: 18px;
+              width: max-content;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 19px;
+            }
+            
+            .active, .collapsible:hover {
+              background-color: rgb(238, 153, 224);
+            }
+            
+            .content {
+                padding: 0 18px;
+                background-color: rgb(238, 153, 224);
+                max-height: 0;
+                width: max-content;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                color:rgb(0, 0, 0);
+            }
+
+            #cu
+            {
+                cursor: pointer;
+            }
+        </style>
     </head>
 
     <body>
-        <ul>
-            <li><a href=tokyospecialwards.html>Special Wards</a></li>
-            <li><a href=tokyofull.html>Full Prefecture</a></li>
-        </ul>
+        <button type="button" class="collapsible">Geography</button>
+        <div class="content">
+            <ul>
+                <li><a href=tokyospecialwards.html>[Tokyo Special Wards] Average Wage</a></li>
+                <li><a href=tokyofull.html>[Tokyo Full Prefecture] Average Wage</a></li>
+            </ul>
+        </div>
+        <br>
+        <button type="button" class="collapsible">Kotoba decks</button>
+        <div class="content">
+            <ul>
+                <li><span id="cu">pref_kanji</span></li>
+                <li><span id="cu">seasonz</span></li>
+                <li><span id="cu">tokubetsuku</span></li>
+                <li><span id="cu">admin</span></li>
+            </ul>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+            }
+        </script>
+        <script>
+            document.addEventListener('click', function(event) {
+            if (event.target.tagName === 'SPAN') {
+                let copyText = event.target.textContent;
+                navigator.clipboard.writeText("k!q " + copyText);
+            }
+            });
+        </script>
     </body>
 </html>
