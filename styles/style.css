@@ -5,3 +5,29 @@
     width: 100%;
     font-size: 20px;
 }
+
+.collapsible {
+    background-color: #f52ac5bd;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: max-content;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 19px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgb(238, 153, 224);
+  }
+  
+  .content {
+      padding: 0 18px;
+      background-color: rgb(238, 153, 224);
+      max-height: 0;
+      width: max-content;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      color:rgb(0, 0, 0);
+  }
