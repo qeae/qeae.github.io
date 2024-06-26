@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="/fr/phasmo/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="icon" type="image/x-icon" href="Site-favicon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Memo</title>
+    </head>
+
+    <body>
+        <!-- Montrer des elements au hover -->
+        <img src="Site-logo.webp" id="logo"><br><br>
+
+        <div class="box" id="hantu"> <!-- Hantu -->
+            <div class="entite">
+                <h2>Hantu <a href="https://phasmophobia.fandom.com/fr/wiki/Hantu" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Rapide dans le froid, lent dans le chaud</li>
+                        <li>N'accèlere pas en nous voyant</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                    <li>Chasse plus vite par temps de neige ou près de sa pièce favorite</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Températures glaciales <p style="color: red; display: inline;">(obligatoire)</p></li>
+                        <li>Orbes fantomatiques</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Incapable d'allumer le disjoncteur mais l'éteint deux fois plus que les autres entités, pour faire baisser la température</li>
+                        <li>Dégage de la buée de sa bouche mais uniquement quand disjoncteur coupé</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="box" id="onryo"> <!-- Onryo -->
+            <div class="entite">
+                <h2>Onryo <a href="https://phasmophobia.fandom.com/fr/wiki/Onryo" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7~2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p class="desc" style="font-weight: 300; font-size: 20px;">
+                    Attendre 3 souffles ou 1 bougies allumés, crucifix dans la pièce avec lumières éteintes pour énerver 
+                    l'entité pour forcer la chasse. Aussi possible d'empêcher la chasse quand on a peu de santé mentale en rallumant les bougies :
+                    en mettre plusieurs dans la pièce pour éclairer toute la range de la salle et permet de safe.
+                </p>
+                <h3>Chasse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Délai d’attente lorsque le décompte atteint 0 avant la chasse forcée : 7 secondes</li>
+                        <li style="text-decoration: underline;">&lt;60% de santé mentale</li>
+                        <li><p style="color: red; display: inline; font-weight: bold;">Attaque après 3 bougies soufflées, même si +60% SM</p></li>
+                    </ul>
+                </p>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Températures glaciales</li>
+                        <li>Orbes fantomatiques</li>
+                        <li>Spirit box</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Pour le test, le briquet compte aussi comme une bougie</li>
+                        <li>Une flamme est prioritaire sur un crucifix pour bloquer une chasse donc avec un crucifix au pied d’une 	bougie, 
+                            <p style="display: inline; font-weight: bold;">si le crucifix est consommé sans que la bougie ne s’éteigne, il ne pourra pas s’agir d’un Onryo.</p></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="box" id="yurei"> <!-- Yurei -->
+            <div class="entite">
+                <h2>Yurei <a href="https://phasmophobia.fandom.com/fr/wiki/Yurei" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7~2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p class="desc" style="font-weight: 300; font-size: 20px;">
+                    Mettre de l'encens dans la pièce, ce qui le piégera pendant 90 secondes. Si un capteur se déclenche, ce n'est pas un Yurei.
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>D.O.T.S</li>
+                        <li>Orbes fantomatiques</li>
+                        <li>Températures glaciales</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Sa compétence fait claquer une porte et enlève 15% de SM</li>
+                        <li><p style="display: inline; font-weight: bold;">C'est la seule entité qui peut intéragir avec la porte d'entrée sans chasse</p></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="box" id="goryo"> <!-- Goryo -->
+            <div class="entite">
+                <h2>Goryo <a href="https://phasmophobia.fandom.com/fr/wiki/Goryo" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7~2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p class="desc" style="font-weight: 300; font-size: 20px;">
+                    <ul>
+                        <li>Mettre un D.O.T.S + caméra dans sa pièce, on le verra mais pas à l'oeil nu</li>
+                        <li>Test du double capteur</li>
+                    </ul>
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>D.O.T.S <p style="color: red; display: inline;">(obligatoire)</p></li>
+                        <li>EMF5</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Ne change <p style="display: inline; text-decoration: underline;">jamais</p> de pièce favorite et reste proche d'elle</li>
+                        <li>Seule façon de le voir : <p style="display: inline; color: red;">regarder un D.O.T.S à travers une caméra</p></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="box" id="fantome"> <!-- Fantôme -->
+            <div class="entite">
+                <h2>Fantôme <a href="https://phasmophobia.fandom.com/fr/wiki/Fantôme" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7~2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p class="desc" style="font-weight: 300; font-size: 20px;">
+                    <ul>
+                        <li style="text-decoration: underline;">Prendre une photo pendant une apparition le fait disparaître mais le bruit reste</li>
+                        <li>N'apparaît pas sur les photos et la photo sera nette</li>
+                    </ul>
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                    <li>Apparaît 0.5 à 1 fois par seconde pendant la chasse (peu)</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>D.O.T.S</li>
+                        <li>Spirit box</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+            </div>
+        </div>
+
+        <div class="box" id="jumeaux"> <!-- Jumeaux -->
+            <div class="entite">
+                <h2>Les Jumeaux <a href="https://phasmophobia.fandom.com/fr/wiki/Les_Jumeaux" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li style="color: aquamarine;">Jumeaux lent : 1.5~2.28</li>
+                        <li style="color: rgb(193, 112, 209);">Jumeaux rapide : 1.9~3.14</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p class="desc" style="font-weight: 300; font-size: 20px;">
+                    <ul>
+                        <li>Double intéraction</li>
+                    </ul>
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>EMF5</li>
+                        <li>Températures glaciales</li>
+                        <li>Spirit box</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Peut faire une <p style="display: inline; font-weight: bold;">double intéraction</p> avec 1 seconde d'écart</li>
+                        <li>2 portées d'interactions différentes: <p style="display: inline; color: aquamarine;">Portée 1 : 3m</p> et <p style="display: inline; color: rgb(193, 112, 209);">Portée 2 : 16m</p> | <p style="display: inline; color: aquamarine;">P(1) = 50%</p> | <p style="display: inline; color: rgb(193, 112, 209);">P(2) = 30%</p> | P(1 + 2) = 20%</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="box" id="djinn"> <!-- Djinn -->
+            <div class="entite">
+                <h2>Djinn <a href="https://phasmophobia.fandom.com/fr/wiki/Djinn" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                <p style="display: inline; font-weight: 300; font-size: 20px; color: red;">2,5m/s si :</p>
+                    <ul>
+                        <li>Disjoncteur allumé</li>
+                        <li>Cible en ligne de mire</li>
+                        <li>Cible à +3m</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>EMF5</li>
+                        <li>Températures glaciales</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Sa compétence draine <p style="display: inline; font-weight: bold;">25% de SM</p> aux joueurs à 3m ou dans la pièce</li>
+                        <li>Désactiver le disjoncteur l'empêchra d'utiliser sa compétence</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="box" id="revenant"> <!-- Revenant -->
+            <div class="entite">
+                <h2>Revenant <a href="https://phasmophobia.fandom.com/fr/wiki/Revenant" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>3.0 en poursuite</li>
+                        <li>1.0 en errance</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p style="font-size: 20px; font-weight: 300;">
+                    Pendant que vous vous cachez, écoutez les bruits de pas de l'entité ; 
+                    si les bruits de pas sont relativement rares et espacés alors que l'entité est à proximité, alors il s'agit très probablement d'un Revenant
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                    <li><p style="display: inline; color: red; font-weight: bold;">Se cacher vite</p> et encens si impossible de se cacher</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Écriture</li>
+                        <li>Températures glaciales</li>
+                        <li>Orbes fantomatiques</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+            </div>
+        </div>
+
+        <div class="box" id="deogen"> <!-- Deogen -->
+            <div class="entite">
+                <h2>Deogen <a href="https://phasmophobia.fandom.com/fr/wiki/Deogen" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <p style="display: inline; font-size: 20px; font-weight: 300; text-decoration: underline;">En chasse (décroissant) :</p>
+                    <ul>
+                        <li>3.0 à plus de 6m du joueur</li>
+                        <li>entre 3.0 et 0.4 entre 6m et 2.5m</li>
+                        <li>0.4 à moins de 2.5m</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p style="font-size: 20px; font-weight: 300;">
+                    <ul><li>33% de chance de faire un soufflement à la spirit box (distance max : 2m)</li></ul>
+                    
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li style="font-weight: bold;">&lt;40% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Spirit box <p style="color: red; display: inline;">(obligatoire)</p></li>
+                        <li>Écriture</li>
+                        <li>D.O.T.S</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+            </div>
+        </div>
+
+        <div class="box" id="demon"> <!-- Demon -->
+            <div class="entite">
+                <h2>Démon <a href="https://phasmophobia.fandom.com/fr/wiki/Démon" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <h3>Chasse</h3>
+                <ul>
+                    <li style="font-weight: bold; color: red;">&lt;70% de SM (sauf pouvoir)</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Écriture</li>
+                        <li>Températures glaciales</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Tranche de chances de chasse normale : 50~70% (tranche normale : 26~50%)</li>
+                    <li>Tranche de chances de chasse fréquente : 0~50% (tranche normale : 0~25%)</li>
+                    <li>Efficacité de l’encens hors chasse : 60 secondes (valeur normale : 90 secondes)</li>
+                    <li>Durée d’attente entre les chasses : 20 secondes (valeur normale : 25 secondes)</li>
+                    <li style="font-weight: bold;">Portée du crucifix : 1.5x la valeur normale de la portée normale du crucifix</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="myling"> <!-- Myling -->
+            <div class="entite">
+                <h2>Myling <a href="https://phasmophobia.fandom.com/fr/wiki/Myling" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <ul>
+                    <li style="font-weight: bold;">Lampe torche + bruit de pas</li>
+                </ul>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Écriture</li>
+                        <li>EMF5</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li style="text-decoration: underline;">Parle beaucoup au microphone parabolique</li>
+                    <li>Fait dysfonctionner les appareils électroniques à 10 mètres de lui au même étage</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="cauchemar"> <!-- Cauchemar -->
+            <div class="entite">
+                <h2>Cauchemar <a href="https://phasmophobia.fandom.com/fr/wiki/Cauchemar" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <h3>Chasse</h3>
+                <ul>
+                    <li style="font-weight: bold;">&lt;60% de SM dans le noir</li>
+                    <li>&lt;40% de SM à la lumière</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Écriture</li>
+                        <li>Orbes fantomatiques</li>
+                        <li>Spirit box</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li style="text-decoration: underline;">Adore l'obscurité</li>
+                    <li>Incapable d’allumer par lui-même un interrupteur et donc pour compenser il aura souvent tendance a faire des apparitions pour casser les lumières de la pièce</li>
+                    <li>Si tu allumes la lumière de la salle du cauchemar, il y a des chances qu'il change de pièce</li>
+                    <li style="font-weight: bold;">Enclin à éteindre les interrupteurs dès qu'on les allume (plus souvent que les autres)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="raiju"> <!-- Raiju -->
+            <div class="entite">
+                <h2>Raiju <a href="https://phasmophobia.fandom.com/fr/wiki/Raiju" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                        <li style="font-weight: bold;">2.5 fixe quand proche d'un appareil électronique</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p style="font-size: 20px; font-weight: 300;">
+                    Si l'entité continue à marcher très rapidement quand elle se balade (et ne poursuit pas de joueurs particuliers), alors c'est très probablement un Raiju.
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;65% de SM si appareil à proximité</li>
+                    <li>&lt;50% sinon</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>D.O.T.S</li>
+                        <li>Orbes fantomatiques</li>
+                        <li>EMF5</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li style="text-decoration: underline;">Fait dysfonctionner des objets jusqu'à 15m (10m habituellement)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="banshee"> <!-- Banshee -->
+            <div class="entite">
+                <h2>Banshee <a href="https://phasmophobia.fandom.com/fr/wiki/Banshee" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                    <li style="font-weight: bold;">Cible une proie jusqu'à ce qu'elle meurt. Si elle sort, elle agira comme un entité normale jusqu'à son retour.</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>D.O.T.S</li>
+                        <li>Orbes fantomatiques</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li style="text-decoration: underline;">Gémissement spécifique au micro parabolique</li>
+                    <li>Lors d'une chasse, sa voix sera plus audible que la normale</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="ombre"> <!-- Ombre -->
+            <div class="entite">
+                <h2>Ombre <a href="https://phasmophobia.fandom.com/fr/wiki/Ombre" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <h3>Chasse</h3>
+                <ul>
+                    <li style="font-weight: bold; color: red;">&lt;35% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>EMF5</li>
+                        <li>Écriture</li>
+                        <li>Températures glaciales</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>À 100% de santé mentale moyenne, elle a 0% de chances de réussir un événement. Le taux de réussite augmente de 2% par pourcentage de santé mentale moyenne perdu (50% = 100%)</li>
+                    <li style="text-decoration: underline;">Ne fait aucune intéraction si elle n'est pas seule dans la pièce</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="moroi"> <!-- Moroi -->
+            <div class="entite">
+                <h2>Ombre <a href="https://phasmophobia.fandom.com/fr/wiki/Moroï" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <p style="display: inline; font-size: 20px;">1.5 mais augmente tous les 5% de SM :</p>
+                    <ul>
+                        <li>100 – 45% : 1.500 ~ 2.275</li>
+                        <li>44 – 40% : 1.583 ~ 2.610</li>
+                        <li>39 – 35% : 1.660 ~ 2.740</li>
+                        <li>34 – 30% : 1.749 ~ 2.885</li>
+                        <li>29 – 25% : 1.832 ~ 3.025</li>
+                        <li>24 – 20% : 1.915 ~ 3.150</li>
+                        <li>19 – 15% : 1.998 ~ 3.300</li>
+                        <li>14 – 10% : 2.081 ~ 3.435</li>
+                        <li>9 –  5% : 2.164 ~ 3.570</li>
+                        <li>4 –  0% : 2.250 ~ 3.700</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <ul>
+                    <li>Utiliser des pilules en pleine chasse le fera ralentir</li>
+                </ul>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Spirit box <p style="color: red; display: inline;">(obligatoire)</p></li>
+                        <li>Écriture</li>
+                        <li>Températures glaciales</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Durée de l’effet de l’encens en chasse : 1.5x la valeur normale de l’encens actif (pdt 12s, 6s normalement)</li>
+                    <li>Il peut vous maudire par spirit box/micro, ce qui pompe la SM</li>
+                    <li>Les pilules cassent la malédiction</li>
+                    <li>Rester en dehors de la maison met en pause la malédiction</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="poltergeist"> <!-- Poltergeist -->
+            <div class="entite">
+                <h2>Poltergeist <a href="https://phasmophobia.fandom.com/fr/wiki/Poltergeist" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p style="font-size: 20px; font-weight: bold;">
+                    Faire un tas d'objet et attendre le kick du poltergeist, les objets portent une trace EMF 2 au lieu d’une trace EMF 3
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Spirit box</li>
+                        <li>Écriture</li>
+                        <li>Empreintes</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li style="text-decoration: underline;">Fait perdre 2% santé mentale aux joueurs dans la piecesà chaque objet lancé</li>
+                    <li>Lance beaucoup plus d'objets que la moyenne</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="esprit"> <!-- Esprit -->
+            <div class="entite">
+                <h2>Esprit <a href="https://phasmophobia.fandom.com/fr/wiki/Esprit" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p style="font-size: 20px; font-weight: 300;">
+                    Efficacité de l’encens hors chasse : 180 secondes (valeur normale : 90 secondes)
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Spirit box</li>
+                        <li>Écriture</li>
+                        <li>EMF5</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Aucune particularité</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="obake"> <!-- Obake -->
+            <div class="entite">
+                <h2>Obake <a href="https://phasmophobia.fandom.com/fr/wiki/Obake" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p>
+                    <ul>
+                        <li>Capable pendant une chasse d'effectuer une transformation, 6.66% à chaque clignotement (au minimum 1 fois par chasse)</li>
+                    </ul>
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Empreintes <p style="color: red; display: inline;">(obligatoire)</p></li>
+                        <li>Orbes fantomatiques</li>
+                        <li>EMF5</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Chances de ne pas laisser de trace : 25% (EMF compris)</li>
+                    <li style="color: red;">Chances de laisser une empreinte spéciale : 16.67% (1 chance sur 6)</li>
+                    <li>Peut réduire le temps restant de toutes les empreintes digitales</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="spectre"> <!-- Spectre -->
+            <div class="entite">
+                <h2>Spectre <a href="https://phasmophobia.fandom.com/fr/wiki/Spectre" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p>
+                    <ul>
+                        <li>Test du sel</li>
+                    </ul>
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>D.O.T.S</li>
+                        <li>Spirit box</li>
+                        <li>EMF5</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Peut se téléporter et chasser directement après</li>
+                    <li>Trace EMF2 si il se téléporte</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="yokai"> <!-- Yokai -->
+            <div class="entite">
+                <h2>Yokai <a href="https://phasmophobia.fandom.com/fr/wiki/Yokai" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <p style="font-size: 20px; font-weight: 300;">
+                    Le principe est de se faire entendre volontairement en gardant une distance.
+                    Si la lumière de la lampe clignote mais que l'entité ne vient pas il s'agit d'un Yokai sinon t'as des chances de te faire marave
+                </p>
+                <h3>Chasse</h3>
+                <ul>
+                    <li style="color: red;">&lt;80% de SM si un joueur parle à proximité</li>
+                    <li>&lt; sinon 50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>D.O.T.S</li>
+                        <li>Spirit box</li>
+                        <li>Orbes fantomatiques</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Distance d’écoute en chasse : 2.5 mètres (au lieu de 8 pour toutes les autres entités)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="mimic"> <!-- Le mimic -->
+            <div class="entite">
+                <h2>Le Mimic <a href="https://phasmophobia.fandom.com/fr/wiki/Le_Mimic" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8 sauf imitation</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM sauf imitation</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Empreintes</li>
+                        <li>Spirit box</li>
+                        <li>Températures glaciales</li>
+                        <li style="color: red;">Fausses orbes fantomatiques</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Change de pouvoir toutes les 30 secondes à 2 minutes</li>
+                    <li>Il aura toujours une orbe dans sa piece favorite</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="oni"> <!-- Oni -->
+            <div class="entite">
+                <h2>Oni <a href="https://phasmophobia.fandom.com/fr/wiki/Oni" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Normale, 1.7 ~ 2.8</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <ul>
+                    <li style="text-decoration: underline;">Clignote beaucoup moins que les autres entités en chasse</li>
+                </ul>
+                <h3>Chasse</h3>
+                <ul>
+                    <li>&lt;50% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>EMF5</li>
+                        <li>D.O.T.S</li>
+                        <li>Températures glaciales</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Niveau d’activité doublé (minimum 2 joueurs à 3 mètres ou moins)</li>
+                    <li style="font-weight: bold;">Très actif : fera principalement des apparitions sous forme complète (réduisent de 20% la SM)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box" id="thaye"> <!-- Thaye -->
+            <div class="entite">
+                <h2>Thayé <a href="https://phasmophobia.fandom.com/fr/wiki/Thayé" id="lien" target="_blank">Lien wiki</a></h2>
+                <h3>Vitesse</h3>
+                <p class="desc">
+                    <ul>
+                        <li style="font-weight: bold;">2.75 en chasse</li>
+                    </ul>
+                </p>
+                <h3>Test</h3>
+                <ul>
+                    <li>Planche ouija : lui demander son âge à plusieurs niveaux de vieillissement (il est le seul a répondre un âge différent au cours de la partie)</li>
+                </ul>
+                <h3>Chasse</h3>
+                <ul>
+                    <li style="color: red; font-weight: bold;">&lt;75% de SM</li>
+                </ul>
+                <h3>Preuves</h3>
+                <p class="desc">
+                    <ul>
+                        <li>Orbes fantomatiques</li>
+                        <li>D.O.T.S</li>
+                        <li>Écriture</li>
+                    </ul>
+                </p>
+                <h3>Autre</h3>
+                <ul>
+                    <li>Niveau d’activité: 200%</li>
+                    <li>Or le Thaye est la <p style="font-weight: bold; display: inline;">seule entité à vieillir</p>, càd qu'elle perd en efficacité :
+                        <ul>
+                            <li>Perte de capacité de chasse anticipée par niveau de vieillissement : 6% (15% min)</li>
+                            <li>Perte de vitesse par niveau de vieillissement : 0.175 (1.00min)</li>
+                            <li>Perte de niveau d’activité par niveau de vieillissement : 15% (50%min)</li>
+                            <li>Ainsi, à la fin des 10 niveaux de vieillissement il ne peut plus attaquer les joueurs ayant plus de 15% santé mentale et sera lent</li>
+                            <li style="text-decoration: underline;">Il faut faire attention car il attaque tôt et aussi à ne pas trop qu'il vieillisse pour pas le confondre avec d'autres entités</li>
+                        </ul>
+                        <p style="font-weight: bold;">Ainsi, le vieillissement du Thayé dure 1m ou 2m.</p>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
