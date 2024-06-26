@@ -7,10 +7,11 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://qeae.github.io/fr/phasmo/">
         <meta property="og:title" content="Mémo Phasmophobia | Enquêtez plus efficacement">
-        <meta property="og:description" content="Boostez votre vitesse d'enquêtre grâce à ce mémo pour les entités phasmophobia. Contient toutes les spécificités de chaque entité.">
+        <meta property="og:description" content="Boostez votre vitesse d'enquête grâce à ce mémo pour les entités Phasmophobia. Contient toutes les spécificités de chaque entité.">
         <meta property="og:image" content="https://qeae.github.io/fr/phasmo/Logo.jpg">
 
         <link rel="stylesheet" type="text/css" href="/fr/phasmo/style.css"/>
+        <script src="script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="icon" type="image/x-icon" href="Site-favicon.ico">
@@ -19,10 +20,26 @@
     </head>
 
     <body>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <h3 id="filtres">Filtres</h3>
+            <div id="santem">
+                <input type="checkbox" class="cbox" id="csm35" name="35sm" checked /><label for="35sm">&lt;35% SM</label><br>
+                <input type="checkbox" class="cbox" id="csm40" name="40sm" checked /><label for="40sm">&lt;40% SM</label><br>
+                <input type="checkbox" class="cbox" id="csm50" name="50sm" checked /><label for="50sm">&lt;50% SM</label><br>
+                <input type="checkbox" class="cbox" id="csm60" name="60sm" checked /><label for="60sm">&lt;60% SM</label><br>
+                <input type="checkbox" class="cbox" id="csm65" name="65sm" checked /><label for="65sm">&lt;65% SM</label><br>
+                <input type="checkbox" class="cbox" id="csm70" name="70sm" checked /><label for="70sm">&lt;70% SM</label><br>
+                <input type="checkbox" class="cbox" id="csm75" name="75sm" checked /><label for="75sm">&gt;75% SM et plus</label><br>
+            </div>
+            
+            
+        </div>
+        <button class="openbtn" onclick="openNav()">☰ Filtrer</button>  
         <!-- Montrer des elements au hover -->
         <img src="Site-logo.webp" id="logo"><br><br>
 
-        <div class="box" id="hantu"> <!-- Hantu -->
+        <div class="box sm50" id="hantu"> <!-- Hantu -->
             <div class="entite">
                 <h2>Hantu <a href="https://phasmophobia.fandom.com/fr/wiki/Hantu" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -56,7 +73,7 @@
             </div>
         </div>
 
-        <div class="box" id="onryo"> <!-- Onryo -->
+        <div class="box sm60" id="onryo"> <!-- Onryo -->
             <div class="entite">
                 <h2>Onryo <a href="https://phasmophobia.fandom.com/fr/wiki/Onryo" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -98,7 +115,7 @@
             </div>
         </div>
 
-        <div class="box" id="yurei"> <!-- Yurei -->
+        <div class="box sm50" id="yurei"> <!-- Yurei -->
             <div class="entite">
                 <h2>Yurei <a href="https://phasmophobia.fandom.com/fr/wiki/Yurei" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -133,7 +150,7 @@
             </div>
         </div>
 
-        <div class="box" id="goryo"> <!-- Goryo -->
+        <div class="box sm50" id="goryo"> <!-- Goryo -->
             <div class="entite">
                 <h2>Goryo <a href="https://phasmophobia.fandom.com/fr/wiki/Goryo" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -171,7 +188,7 @@
             </div>
         </div>
 
-        <div class="box" id="fantome"> <!-- Fantôme -->
+        <div class="box sm50" id="fantome"> <!-- Fantôme -->
             <div class="entite">
                 <h2>Fantôme <a href="https://phasmophobia.fandom.com/fr/wiki/Fantôme" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -204,7 +221,7 @@
             </div>
         </div>
 
-        <div class="box" id="jumeaux"> <!-- Jumeaux -->
+        <div class="box sm50" id="jumeaux"> <!-- Jumeaux -->
             <div class="entite">
                 <h2>Les Jumeaux <a href="https://phasmophobia.fandom.com/fr/wiki/Les_Jumeaux" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -242,7 +259,7 @@
             </div>
         </div>
 
-        <div class="box" id="djinn"> <!-- Djinn -->
+        <div class="box sm50" id="djinn"> <!-- Djinn -->
             <div class="entite">
                 <h2>Djinn <a href="https://phasmophobia.fandom.com/fr/wiki/Djinn" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -277,7 +294,7 @@
             </div>
         </div>
 
-        <div class="box" id="revenant"> <!-- Revenant -->
+        <div class="box sm50" id="revenant"> <!-- Revenant -->
             <div class="entite">
                 <h2>Revenant <a href="https://phasmophobia.fandom.com/fr/wiki/Revenant" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -309,7 +326,7 @@
             </div>
         </div>
 
-        <div class="box" id="deogen"> <!-- Deogen -->
+        <div class="box sm40" id="deogen"> <!-- Deogen -->
             <div class="entite">
                 <h2>Deogen <a href="https://phasmophobia.fandom.com/fr/wiki/Deogen" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -342,7 +359,7 @@
             </div>
         </div>
 
-        <div class="box" id="demon"> <!-- Demon -->
+        <div class="box sm70" id="demon"> <!-- Demon -->
             <div class="entite">
                 <h2>Démon <a href="https://phasmophobia.fandom.com/fr/wiki/Démon" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -375,7 +392,7 @@
             </div>
         </div>
 
-        <div class="box" id="myling"> <!-- Myling -->
+        <div class="box sm50" id="myling"> <!-- Myling -->
             <div class="entite">
                 <h2>Myling <a href="https://phasmophobia.fandom.com/fr/wiki/Myling" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -408,7 +425,7 @@
             </div>
         </div>
 
-        <div class="box" id="cauchemar"> <!-- Cauchemar -->
+        <div class="box sm60" id="cauchemar"> <!-- Cauchemar -->
             <div class="entite">
                 <h2>Cauchemar <a href="https://phasmophobia.fandom.com/fr/wiki/Cauchemar" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -441,7 +458,7 @@
             </div>
         </div>
 
-        <div class="box" id="raiju"> <!-- Raiju -->
+        <div class="box sm65" id="raiju"> <!-- Raiju -->
             <div class="entite">
                 <h2>Raiju <a href="https://phasmophobia.fandom.com/fr/wiki/Raiju" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -475,7 +492,7 @@
             </div>
         </div>
 
-        <div class="box" id="banshee"> <!-- Banshee -->
+        <div class="box sm50" id="banshee"> <!-- Banshee -->
             <div class="entite">
                 <h2>Banshee <a href="https://phasmophobia.fandom.com/fr/wiki/Banshee" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -506,7 +523,7 @@
             </div>
         </div>
 
-        <div class="box" id="ombre"> <!-- Ombre -->
+        <div class="box sm35" id="ombre"> <!-- Ombre -->
             <div class="entite">
                 <h2>Ombre <a href="https://phasmophobia.fandom.com/fr/wiki/Ombre" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -536,9 +553,9 @@
             </div>
         </div>
 
-        <div class="box" id="moroi"> <!-- Moroi -->
+        <div class="box sm50" id="moroi"> <!-- Moroi -->
             <div class="entite">
-                <h2>Ombre <a href="https://phasmophobia.fandom.com/fr/wiki/Moroï" id="lien" target="_blank">Lien wiki</a></h2>
+                <h2>Moroï <a href="https://phasmophobia.fandom.com/fr/wiki/Moroï" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
                 <p class="desc">
                     <p style="display: inline; font-size: 20px;">1.5 mais augmente tous les 5% de SM :</p>
@@ -581,7 +598,7 @@
             </div>
         </div>
 
-        <div class="box" id="poltergeist"> <!-- Poltergeist -->
+        <div class="box sm50" id="poltergeist"> <!-- Poltergeist -->
             <div class="entite">
                 <h2>Poltergeist <a href="https://phasmophobia.fandom.com/fr/wiki/Poltergeist" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -614,7 +631,7 @@
             </div>
         </div>
 
-        <div class="box" id="esprit"> <!-- Esprit -->
+        <div class="box sm50" id="esprit"> <!-- Esprit -->
             <div class="entite">
                 <h2>Esprit <a href="https://phasmophobia.fandom.com/fr/wiki/Esprit" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -646,7 +663,7 @@
             </div>
         </div>
 
-        <div class="box" id="obake"> <!-- Obake -->
+        <div class="box sm50" id="obake"> <!-- Obake -->
             <div class="entite">
                 <h2>Obake <a href="https://phasmophobia.fandom.com/fr/wiki/Obake" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -682,7 +699,7 @@
             </div>
         </div>
 
-        <div class="box" id="spectre"> <!-- Spectre -->
+        <div class="box sm50" id="spectre"> <!-- Spectre -->
             <div class="entite">
                 <h2>Spectre <a href="https://phasmophobia.fandom.com/fr/wiki/Spectre" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -717,7 +734,7 @@
             </div>
         </div>
 
-        <div class="box" id="yokai"> <!-- Yokai -->
+        <div class="box sm75" id="yokai"> <!-- Yokai -->
             <div class="entite">
                 <h2>Yokai <a href="https://phasmophobia.fandom.com/fr/wiki/Yokai" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -734,7 +751,7 @@
                 <h3>Chasse</h3>
                 <ul>
                     <li style="color: red; font-weight: bold;">&lt;80% de SM si un joueur parle à proximité</li>
-                    <li>&lt; sinon 50% de SM</li>
+                    <li>sinon &lt;50% de SM</li>
                 </ul>
                 <h3>Preuves</h3>
                 <p class="desc">
@@ -782,7 +799,7 @@
             </div>
         </div>
 
-        <div class="box" id="oni"> <!-- Oni -->
+        <div class="box sm50" id="oni"> <!-- Oni -->
             <div class="entite">
                 <h2>Oni <a href="https://phasmophobia.fandom.com/fr/wiki/Oni" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -815,7 +832,7 @@
             </div>
         </div>
 
-        <div class="box" id="thaye"> <!-- Thaye -->
+        <div class="box sm75" id="thaye"> <!-- Thaye -->
             <div class="entite">
                 <h2>Thayé <a href="https://phasmophobia.fandom.com/fr/wiki/Thayé" id="lien" target="_blank">Lien wiki</a></h2>
                 <h3>Vitesse</h3>
@@ -856,5 +873,6 @@
                 </ul>
             </div>
         </div>
+
     </body>
 </html>

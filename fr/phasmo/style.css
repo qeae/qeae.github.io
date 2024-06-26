@@ -6,7 +6,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 40px;
     width: 400px;
 }
 
@@ -48,4 +48,73 @@ body {
 
 .entite li li {
     list-style-type: square;
-  }
+}
+
+#santem {
+    margin-top: 20px;
+    margin-left: 10px;;
+}
+
+.cbox {
+    transform: scale(1.2)
+}
+
+label {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    left: 4px;
+    position: relative;
+}
+
+
+.sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.sidebar .closebtn:hover {
+    color: #444;
+}
+
+.sidebar h3 {
+    display: inline;
+    margin-left: 90px;
+    margin-bottom: 50px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.openbtn {
+    position: fixed;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: rgb(2, 2, 2);
+    padding: 10px 15px;
+    margin-left: 20px;
+    border: #444;
+    border-radius: 8%;
+}
+
+.openbtn:hover {
+    background-color: #b9b8b8;
+}
+  
