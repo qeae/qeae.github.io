@@ -16,9 +16,9 @@ function openNav() {
     sidebar.style.width = "0";
 }
 
-
-
 window.addEventListener("DOMContentLoaded", (event) => {
+    var sidebar = document.getElementById("mySidebar");
+    sidebar.style.width = "0";
     const sm35 = document.querySelector("#csm35");
     if (sm35) {
         sm35.addEventListener("change", () => {
