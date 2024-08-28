@@ -31,3 +31,7 @@
       transition: max-height 0.2s ease-out;
       color:rgb(0, 0, 0);
   }
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;  
+}
