@@ -76,14 +76,49 @@
                 opacity: 100%;
                 transition: opacity 0.4s;
             }
+
+            #navbutton {
+                position: fixed;
+                padding-left: 15px;
+                padding-top: 10px;
+                font-size: 19px;
+                color: gray;
+                text-align: left;
+
+            }
+
+            #navigators .navs {
+                font-size: 17px;
+                padding-top: 12px;
+                color: white;
+            }
+
+            #navigators .navs:hover {
+                color: rgb(184, 190, 196);
+            }
         </style>
     </head>
         
     <body>
+        <div id="navbutton">navigate<br>
+            <div id="navigators">
+                <span><a href="./#Essentials" class="navs">Essentials</a><br></span>
+                <span><a href="./#Spreads" class="navs">Spreadsheets ~ Charts</a><br></span>
+                <span><a href="./#Tracking" class="navs">Tracking</a><br></span>
+                <span><a href="./#Anime" class="navs">Anime</a><br></span>
+                <span><a href="./#3D" class="navs">3D</a><br></span>
+                <span><a href="./#Subtitles" class="navs">Subtitles</a><br></span>
+                <span><a href="./#Manga" class="navs">Manga</a><br></span>
+                <span><a href="./#Novels" class="navs">Novels ~ Light novels ~ Nonfiction</a><br></span>
+                <span><a href="./#VNs" class="navs">Visual novels</a><br></span>
+                <span><a href="./#Misc" class="navs">Misc</a><br></span>
+            </div>
+        </div>
+
         <br><img src="nanayay.webp" width="48px"><br>
         <p style="color:aquamarine">My favorites are marked with ⭐ but all of these resources are worth looking!<br>If you can't find what you're looking for, check <a href="https://everythingmoe.com/">Everything.moe</a></p>
         <div>
-            <h2>Essentials</h2>
+            <h2 id="Essentials">Essentials</h2>
             <ul>
                 <li><a href="https://learnjapanese.moe/yomichan/" target="_blank">Yomitan + Ankiconnect</a></li>
                 <li class="box" style="padding-top: 4px;">Mining note ➕</li>
@@ -96,7 +131,7 @@
         </div><br>
 
         <div>
-            <h2>Spreadsheets ~ Charts</h2>
+            <h2 id="Spreads">Spreadsheets ~ Charts</h2>
             <ul>
                 <li>⭐<a href="https://docs.google.com/spreadsheets/d/1w42HEKEu2AzZg9K7PI0ma9ICmr2qYEKQ9IF4XxFSnQU/edit?gid=1999205540#gid=1999205540" target="_blank">Japanese Media Recommendations</a> by kuri</li>
                 <li>⭐<a href="https://docs.google.com/document/u/1/d/1KnyyDt7jimEz-dgeMSKymRaT2r3QKBPm9AzqZ6oUWAs/pub" target="_blank">List of starter Japanese Media</a></li>
@@ -107,7 +142,7 @@
         </div><br>
 
         <div>
-            <h2>Tracking</h2>
+            <h2 id="Tracking">Tracking</h2>
             <ul>
                 <li>⭐<a href="https://bookmeter.com" target="_blank">bookmeter</a></li>
                 <li>⭐<a href="https://learnnatively.com" target="_blank">LearnNatively</a></li>
@@ -120,7 +155,7 @@
         </div><br>
 
         <div>
-            <h2>Anime</h2>
+            <h2 id="Anime">Anime</h2>
             <ul>
                 <li><a href="https://nyaa.si/?q=&f=0&c=1_4" target="_blank">nyaa.si</a> (torrent)</li>
                 <li>⭐<a href="https://hianime.to/" target="_blank">HiAnime</a> (streaming)</li>
@@ -129,7 +164,7 @@
         </div><br>
 
         <div>
-            <h2>3D</h2>
+            <h2 id="3D">3D</h2>
             <ul>
                 <li>⭐<a href="https://miomio.guru/" target="_blank">miomio.guru</a></li>
                 <li><a href="https://9tsu.cc/" target="_blank">9tsu.cc</a></li>
@@ -150,7 +185,7 @@
         </div><br>
 
         <div>
-            <h2>Subtitles</h2>
+            <h2 id="Subtitles">Subtitles</h2>
             <ul>
                 <li>⭐<a href="https://github.com/killergerbah/asbplayer" target="_blank">asbplayer</a> - must-have.</li><br>
                 <li>⭐<a href="https://jimaku.cc/" target="_blank">jimaku.cc</a>, amazing collection of subtitles</li>
@@ -163,7 +198,7 @@
         </div><br>
 
         <div>
-            <h2>Manga</h2>
+            <h2 id="Manga">Manga</h2>
             <ul>
                 <li>⭐<a href="https://catalog.mokuro.moe/" target="_blank">Mokuro catalog</a> + <a href="https://reader.mokuro.app/" target="_blank">reader</a></li>
                 <li><a href="https://nyaa.si/view/1883088">mokuro full catalog</a> (torrent)</li>
@@ -183,7 +218,7 @@
         </div><br>
 
         <div>
-            <h2>Novels ~ Light novels ~ Nonfiction</h2>
+            <h2 id="Novels">Novels ~ Light novels ~ Nonfiction</h2>
             <ul>
                 <li>⭐<a href="https://reader.ttsu.app/manage" target="_blank">ッツ</a> - must-have web-based epub reader</li><br>
                 <li style="text-decoration:line-through;"><a href="https://yonde.itazuraneko.org/" target="_blank">Itazuraneko library</a></li>
@@ -209,7 +244,7 @@
         </div><br>
 
         <div>
-            <h2>Visual novels</h2>
+            <h2 id="VNs">Visual novels</h2>
             <ul>
                 <li>⭐<a href="https://vndb.org/" target="_blank">vndb</a>, search for VNs</li>
                 <li><a href="https://donkuri.github.io/learn-japanese/mining/#sharex" target="_blank">ShareX</a>, optional, for having images in your cards</li>
@@ -226,7 +261,7 @@
         </div><br>
 
         <div>
-            <h2>Misc</h2>
+            <h2 id="Misc">Misc</h2>
             <ul>
                 <li>⭐<a href="https://github.com/arianneorpilla/jidoujisho" target="_blank">jidoujisho</a>, powerful all-in-one for mobile (android)</li>
                 <li class="box">⭐<a href="https://jpdb.io/" target="_blank">JPDB</a> - immersion material search engine, with difficulty levels, word count,... ➕</li>
@@ -257,7 +292,7 @@
             });
             }
         </script>
-        <span id="footerr">made by zu ❤️</span><br>
+        <a href="https://qeae.github.io/en/jap/" class="navs" target="_blank"><span id="footerr">made by zu ❤️</span></a><br>
     </body>
 
 </html>
