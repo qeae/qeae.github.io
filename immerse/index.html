@@ -70,11 +70,44 @@
                 color: white;
                 opacity: 30%;
                 transition: opacity 1s;
+                position: relative;
             }
 
             #footerr:hover {
                 opacity: 100%;
                 transition: opacity 0.4s;
+            }
+
+            .tooltiptext {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                bottom: 120%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                background-color: black;
+                color: white;
+                padding: 6px 10px;
+                border-radius: 6px;
+                white-space: nowrap;
+                font-size: 16px;
+            }
+
+            #footerr:hover .tooltiptext {
+                visibility: visible;
+                opacity: 0.8;
+                transition: opacity 1s;
+            }
+
+            .tooltiptext::after {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 5px;
+                border-style: solid;
+                border-color: black transparent transparent transparent;
             }
 
             #navbutton {
@@ -215,6 +248,7 @@
                 <div class="content">
                     <a href="https://donkuri.github.io/learn-japanese/mining/" target="_blank">Mining guide!! Must read!!!</a><br>
                     Here is a <a href="https://learnjapanese.moe/resources/#mining" target="_blank">list of notes</a>, and <a href="https://arbyste.github.io/jp-mining-note/" target="_blank">my personal one</a>
+                    <p style="font-weight: bold; color: aquamarine;">Check out these new notes : <a href="https://github.com/youyoumu/kiku" target="_blank">Kiku</a> and <a href="https://github.com/BrenoAqua/Senren" target="_blank">Senren</a> !!</p>
                 </div>
                 <li>A brain</li>
             </ul>
@@ -318,11 +352,11 @@
                 <li>⭐<a href="https://github.com/killergerbah/asbplayer" target="_blank">asbplayer</a> - must-have.</li><br>
                 <li>⭐<a href="https://jimaku.cc/" target="_blank">jimaku.cc</a>, amazing collection of subtitles</li>
                 <li><a href="https://kitsunekko.net/dirlist.php?dir=subtitles%2Fjapanese%2F" target="_blank">kitsunekko</a>, large collection of anime subs</li>
+                <li><a href="https://bbs.acgrip.com/forum-37-1.html" target="blank">another anime subtitles collection</a></li>
                 <li><a href="https://github.com/Matchoo95/JP-Subtitles" target="_blank">subtitles from netflix</a></li>
-                <li><a href="https://github.com/eurusdagr/Japanese-Movies-Subtitles" target="_blank">japanese movies subtitles</a></li>
+                <li><a href="https://github.com/eurusdagr/Japanese-Movies-Subtitles" target="_blank">japanese movies subtitles</a></li><br>
                 <li><a href="https://www.youtube.com/watch?v=x0h3ooBHrpk&ab_channel=DJT%27sQM" target="_blank">Auto subs sync tutorial</a>, in case subs are not synced</li>
                 <li>⭐<a href="https://github.com/GodPepe7/asb-auto-subs" target="_blank">ASB Auto-download subs extension</a></li>
-
                 <li>⭐<a href="https://github.com/Bennycopter/subtitle-hider">Subtitle hider</a> by Bennycopter</li>
             </ul>
         </div><br>
@@ -401,6 +435,7 @@
             <h2 id="Misc">Misc</h2>
             <ul>
                 <li>⭐<a href="https://github.com/arianneorpilla/jidoujisho" target="_blank">jidoujisho</a>, powerful all-in-one for mobile (android)</li>
+                <li><a href="https://reader.manabi.io" target="_blank">Manabi</a>, a reader similar to jidoujisho but for iOS</li>
                 <li class="box">⭐<a href="https://jpdb.io/" target="_blank">JPDB</a> - immersion material search engine, with difficulty levels, word count,... ➕</li>
                 <div class="content">
                     Upload all your Anki words on JPDB and mark them as 'never forget'.<br>
@@ -429,7 +464,13 @@
             });
             }
         </script>
-        <a href="https://qeae.github.io/en/jap/" class="navs" target="_blank"><span id="footerr">made by zu ❤️</span></a><br>
+        <a href="https://qeae.github.io/en/jap/" class="navs" target="_blank">
+            <span id="footerr">
+                made by zu ❤️
+                <span class="tooltiptext"><img src="discord.webp" width="14px"> eae.</span>
+            </span>
+        </a>
+        <br>
     </body>
 
 </html>
