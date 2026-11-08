@@ -2,15 +2,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RH7J9MZMM"></script>
+        <!-- Google tag (gtag.js) - only loaded after the visitor accepts analytics cookies -->
         <script>
+        var GA_ID = 'G-0RH7J9MZMM';
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-0RH7J9MZMM');
+        function loadAnalytics() {
+            if (window.gaLoaded) return;
+            window.gaLoaded = true;
+            window['ga-disable-' + GA_ID] = false;
+            var tag = document.createElement('script');
+            tag.async = true;
+            tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+            document.head.appendChild(tag);
+            gtag('js', new Date());
+            gtag('config', GA_ID);
+        }
         </script>
 
         <meta charset="utf-8" />
@@ -167,6 +175,66 @@
                 font-size: 32px;
                 display: none;
             }
+
+            #cookie-notice {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 420px;
+                width: calc(100% - 40px);
+                box-sizing: border-box;
+                background-color: rgb(30, 28, 28);
+                color: rgb(240, 248, 255);
+                border: 1px solid rgb(222, 76, 200);
+                border-radius: 10px;
+                padding: 14px 18px;
+                font-size: 15px;
+                font-weight: 300;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+            }
+
+            #cookie-notice button {
+                margin-top: 10px;
+                padding: 6px 18px;
+                font-family: inherit;
+                font-size: 15px;
+                color: white;
+                background-color: rgb(189, 29, 165);
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            #cookie-notice button.secondary {
+                background-color: transparent;
+                border: 1px solid rgb(184, 192, 200);
+                color: rgb(184, 192, 200);
+                margin-left: 6px;
+            }
+
+            #cookie-notice button.secondary:hover {
+                background-color: rgb(70, 66, 66);
+            }
+
+            #cookie-settings {
+                font-size: 14px;
+                font-style: italic;
+                color: white;
+                opacity: 30%;
+                transition: opacity 1s;
+            }
+
+            #cookie-settings:hover {
+                color: white;
+                opacity: 100%;
+                transition: opacity 0.4s;
+            }
+
+            #cookie-notice button:hover {
+                background-color: rgb(222, 76, 200);
+            }
         </style>
         <base >
     </head>
@@ -183,7 +251,7 @@
                 <span><a href="./#Manga" class="navs">Manga</a><br></span>
                 <span><a href="./#Novels" class="navs">Novels ~ Light novels ~ Nonfiction</a><br></span>
                 <span><a href="./#VNs" class="navs">Visual novels ~ Videogames</a><br></span>
-                <span><a href="./#Misc" class="navs">Misc</a><br></span>
+                <span><a href="./#Misc" class="navs">Miscellaneous</a><br></span>
             </div>
         </div>
 
@@ -391,9 +459,10 @@
                 <li>⭐<a href="https://z-lib.sk/">z-lib</a> - smaller collection but faster downloads</li>
                 <li>⭐<a href="https://mega.nz/folder/eJ1UmCJA#rDDkP6oSoSGAVrBz113UPg">All Aozorabunko in epub</a> | <a href="https://www.aozora.gr.jp/">Classic link</a></li>
                 <li>⭐<a href="https://readmore.me/">readmore.me</a> - search engine for books</li>
-                <li><a href="https://lolibrary.moe/">lolibrary.moe</a> - search engine for TMW files + Anna's archive</li>
-                <li>TMW Reading Club (#reading-club)</li>
+                <li>⭐TMW Reading Club (#reading-club) (join <a href="https://discord.gg/tmw">TMW</a>)</li>
+                <li>⭐<a href="https://yuurei.moe">yuurei.moe</a> (join <a href="https://discord.gg/immerse">Ten</a>)</li>
                 <p>download</p>
+                <li><a href="https://lolibrary.moe/">lolibrary.moe</a> - search engine for TMW files + Anna's archive</li>
                 <li><a href="https://epub.moe/">epub.moe</a> - change .xml extension to .epub</li>
                 <li><a href="http://dawn.whatbox.ca:11665/f/filelist.html">dawn.whatbox.ca</a></li>
                 <li><a href="https://nyaa.si/view/1548943">[PeepoHappyBooks]</a> - torrent archive</li>
@@ -457,7 +526,7 @@
         </div><br>
 
         <div>
-            <h2 id="Misc">Misc</h2>
+            <h2 id="Misc">Miscellaneous</h2>
             <ul>
                 <li>⭐<a href="https://kuzuri.neocities.org/resources">kuzuri's resources</a> - you will never be bored again⭐</li><br>
 
@@ -467,14 +536,13 @@
                 <li><a href="https://play.google.com/store/apps/details?id=com.aktaris.chattranslator">PopLingo</a>, yomitan dictionaries anywhere on android</li><br>
                 
                 <li>⭐<a href="https://nadeshiko.co/">Nadeshiko</a> - amazing sentence-search engine</li>
-                <li>⭐<a href="https://massif.la/ja">massif.la</a> - another great sentence-search engine</li><br>
-                <li>⭐<a href="https://search.kotu.io/">search.kotu.io</a> - another great sentence-search engine</li><br>
-                <li><a href="https://www.immersionkit.com/">immersionkit</a> - sentence search</li><br>
+                <li>⭐<a href="https://massif.la/ja">massif.la</a> - another great sentence-search engine</li>
+                <li>⭐<a href="https://search.kotu.io/">search.kotu.io</a> - another great sentence-search engine</li>
+                <li><a href="https://www.immersionkit.com/">immersionkit</a> - sentence search</li>
                 <li><a href="https://filmot.com/">filmot</a> - youtube sentence search</li><br>
 
                 <li><a href="https://github.com/YonKuma/imajin.py">imajin</a> - a script made to search for examples sentences in epub, mokuro etc</li>
                 <li><a href="https://ripose-jp.github.io/Memento/">memento</a> - a desktop video player made for japanese learning</li>
-                <li><a href="https://gofile.io/d/lVQaXf">351 audiobooks</a> - from audiobook.jp, scraped by Antimony | <a href="https://coreaudio.netlify.app/"></a>list of ebooks in the collection</li>
             </ul>
         </div><br>
 
@@ -498,12 +566,68 @@
         <a href="https://qeae.github.io/en/jap/" class="navs">
             <span id="footerr">
                 made by zu ❤️
-                <span class="tooltiptext"><img src="discord.webp" width="14px"> eae.<br>site last updated on 08-09-26</span>
+                <span class="tooltiptext"><img src="discord.webp" width="14px"> eae.<br>site last updated on 08-11-26</span>
                 
                 
             </span>
         </a>
         <br>
+
+        <div style="margin-top: 8px;"><a href="#" id="cookie-settings">cookie settings</a></div>
+
+        <div id="cookie-notice" style="display: none;">
+            🍪 This website uses cookies for analytics. Is it okay?<br>
+            <button id="cookie-accept">Yeah</button>
+            <button id="cookie-decline" class="secondary">No</button>
+        </div>
+        <script>
+            (function () {
+                var KEY = "cookieConsent";
+                var notice = document.getElementById("cookie-notice");
+
+                function getChoice() {
+                    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+                }
+                function setChoice(v) {
+                    try { localStorage.setItem(KEY, v); } catch (e) {}
+                }
+                function deleteGaCookies() {
+                    var host = location.hostname.split(".");
+                    var domains = ["", location.hostname];
+                    for (var i = 1; i < host.length - 1; i++) domains.push("." + host.slice(i).join("."));
+                    document.cookie.split(";").forEach(function (c) {
+                        var name = c.split("=")[0].trim();
+                        if (name.indexOf("_ga") === 0) {
+                            domains.forEach(function (d) {
+                                document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + (d ? "; domain=" + d : "");
+                            });
+                        }
+                    });
+                }
+
+                document.getElementById("cookie-accept").addEventListener("click", function () {
+                    setChoice("accepted");
+                    notice.style.display = "none";
+                    loadAnalytics();
+                });
+                document.getElementById("cookie-decline").addEventListener("click", function () {
+                    var wasAccepted = getChoice() === "accepted";
+                    setChoice("declined");
+                    notice.style.display = "none";
+                    window["ga-disable-" + GA_ID] = true;
+                    deleteGaCookies();
+                    if (wasAccepted) location.reload();
+                });
+                document.getElementById("cookie-settings").addEventListener("click", function (e) {
+                    e.preventDefault();
+                    notice.style.display = "block";
+                });
+
+                var choice = getChoice();
+                if (choice === "accepted") loadAnalytics();
+                else if (choice !== "declined") notice.style.display = "block";
+            })();
+        </script>
     </body>
 
 </html>
